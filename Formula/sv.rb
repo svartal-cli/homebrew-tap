@@ -1,26 +1,26 @@
 class Sv < Formula
   desc "Terminal front end for Svartal: sign in, list machines, open shells"
   homepage "https://github.com/svartal-cli/svartal-cli"
-  version "0.1.11"
+  version "0.1.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/svartal-cli/svartal-cli/releases/download/v#{version}/sv-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "6bb6fa8921212fbcd8cf0b3e9230c82613648ee80018bcc8d600084f3582755d"
+      sha256 "3c0ef051de148576bf6a66f544a9e247595cee1e4891d75158c9d11097e4100c"
     else
       url "https://github.com/svartal-cli/svartal-cli/releases/download/v#{version}/sv-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "96a85cdca9129603ff944c072d643a5e58ea9fc789fc56e72dcf6c82d5266a59"
+      sha256 "c5bdc4d7cf934741b9db187545a7131b2ec8ec00b494567625a9aa4af2bafc52"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
       url "https://github.com/svartal-cli/svartal-cli/releases/download/v#{version}/sv-v#{version}-aarch64-unknown-linux-musl.tar.gz"
-      sha256 "afe6cd9883a1b4e6a73f2cef69ccdb2dbf7c5db0943a3fabe9d06dfbd9fbdf47"
+      sha256 "99ebd5d6e7b01d7b7de7043c1ee4c74d7b1651dc99cda18611f863fedc232113"
     else
       url "https://github.com/svartal-cli/svartal-cli/releases/download/v#{version}/sv-v#{version}-x86_64-unknown-linux-musl.tar.gz"
-      sha256 "2c577b85e3e0b36f43faa4f825c97ba1149b47f0df16c3e7a6893a64c1ba7456"
+      sha256 "31dfdbfb37b8ca14313afde74fd7eeddf9e5a76c5138b342e1014701bc125f64"
     end
   end
 
