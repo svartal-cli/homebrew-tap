@@ -1,5 +1,5 @@
-class Sv < Formula
-  desc "Terminal front end for Svartal: sign in, list machines, open shells"
+class SvBrowserRuntime < Formula
+  desc "Private sv runtime for the sv-browser cask"
   homepage "https://github.com/svartal-cli/svartal-cli"
   version "0.1.14"
   license "MIT"
@@ -24,11 +24,10 @@ class Sv < Formula
     end
   end
 
+  keg_only "private runtime for the sv-browser cask"
+
   def install
     bin.install "sv"
-    # Archives carry completions/ from v0.1.1 on; v0.1.0 is the binary alone.
-    bash_completion.install "completions/sv.bash" => "sv" if File.exist?("completions/sv.bash")
-    zsh_completion.install "completions/sv.zsh" => "_sv" if File.exist?("completions/sv.zsh")
   end
 
   test do
